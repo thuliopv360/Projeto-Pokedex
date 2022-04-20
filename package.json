@@ -1,27 +1,27 @@
 {
-  "name": "pokedex",
-  "version": "0.0.0",
-  "description": "Projeto de cunho educativo",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -e js,html,css,ejs"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.3"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thuliopv360/Projeto-Pokedex.git"
-  },
-  "bugs": {
-    "url": "https://github.com/thuliopv360/Projeto-Pokedex/issues"
-  },
-  "homepage": "https://github.com/thuliopv360/Projeto-Pokedex#readme"
+    "name": "projeto-pokedex",
+    "version": "0.0.0",
+    "description": "Projeto de cunho educativo",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thuliopv360/Projeto-Pokedex.git"
+    },
+    "author": "Thulio Paiva",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thuliopv360/Projeto-Pokedex/issues"
+    },
+    "homepage": "https://github.com/thuliopv360/Projeto-Pokedex#readme",
+    "dependencies": {
+        "ejs": "^3.1.6",
+        "express": "^4.17.3"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15"
+    }
 }
