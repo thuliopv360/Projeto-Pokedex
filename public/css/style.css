@@ -4,9 +4,35 @@
     font-family: Roboto, Arial;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
 header {
     padding: 3rem;
+    height: 10%;
     background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul#container a {
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+}
+
+ul#container a li {
+    color: #fff;
+}
+
+ul#container a li:hover {
+    color: black;
 }
 
 header h1 {
@@ -21,6 +47,7 @@ main {
 
 section#cards {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 5rem;
 }
@@ -41,4 +68,18 @@ section#cards div.card h2 {
 
 section#cards div.card p.descricao {
     margin-bottom: 1rem;
+}
+
+footer {
+    height: 10%;
+    background-color: red;
+}
+
+body#detalhes main {
+    height: 70%;
+    padding: 1.5rem;
+}
+
+body#detalhes main img {
+    width: 20rem;
 }

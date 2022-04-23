@@ -6,35 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/pokebola.ico" type="image/x-icon">
     <title>Pokedex</title>
 </head>
 
 <body>
-    <header>
-        <h1>Pokedex</h1>
-    </header>
-    <main>
+    <%- include('./partials/header.ejs') %>
+        <main>
+            <section id="cards">
 
-        <section id="cards">
+                <% pokedex.forEach((pokemon) => { %>
+                    <a href="/detalhes/<%= pokemon.id %>">
 
-            <% pokedex.forEach((pokemon) => { %>
-
-                <div class="card">
-                    <img src="<%= pokemon.imagem %>" alt="">
-                    <h2>
-                        <%= pokemon.nome%>
-                    </h2>
-                    <p class="descricao">
-                        <%= pokemon.descricao %>
-                    </p>
-                    <p> Tipo:
-                        <%= pokemon.tipo %>
-                    </p>
-                </div>
-                <%  }) %>
-        </section>
-
-    </main>
+                        <div class="card">
+                            <img src="<%= pokemon.imagem %>" alt="">
+                            <h2>
+                                <%= pokemon.nome%>
+                            </h2>
+                            <p class="descricao">
+                                <%= pokemon.peso %>
+                            </p>
+                            <p> Fraquezas
+                                <%= pokemon.fraquezas %>
+                            </p>
+                            <p> Tipo:
+                                <%= pokemon.tipo %>
+                            </p>
+                        </div>
+                    </a>
+                    <%  }) %>
+            </section>
+        </main>
+        <%- include('./partials/footer.ejs') %>
 </body>
 
 </html>
