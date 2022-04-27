@@ -45,11 +45,26 @@ main {
     margin: 0 10rem 0 10rem;
 }
 
+main h2 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
 section#cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 1rem;
+}
+
+section#cards a:hover {
+    transition: transform 1s;
+    transform: translateX(0) scale(1.2);
+}
+
+main section#cards a {
+    text-decoration: none;
+    color: black;
 }
 
 section#cards div.card {

@@ -6,10 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/pokebola.ico" type="image/x-icon">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Cadastro</title>
 </head>
 
 <body>
+    <%- include('./partials/header.ejs') %>
+        <main>
+            <h2>Cadastre um novo Pokemon! </h2>
+            <section id="cards">
+                <% bancoDeDados.forEach((pokemon) => { %>
+                    <a href="/pokemon/<%=pokemon.id%>" method="post">
+                        <div class="card">
+                            <img src="<%= pokemon.imagem %>" alt="Pokemon">
+                            <h3>
+                                <%= pokemon.nome%>
+                            </h3>
+                            <p> Tipo:
+                                <%= pokemon.tipo %>
+                            </p>
+                            <p> Fraquezas:
+                                <%= pokemon.fraquezas %>
+                            </p>
+                        </div>
+                    </a>
+
+                    <% }) %>
+        </main>
+        <form action="/create" method="post">
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="descricao">Descricao:</label>
+            <input type="text" id="descricao" name="descricao">
+
+            <label for="tipo">Tipo:</label>
+            <input type="text" id="tipo" name="tipo">
+
+            <label for="imagem">Link da imagem:</label>
+            <input type="text" id="imagem" name="imagem">
+
+            <button id="btnCadastrar" type="submit">Cadastrar</button>
+        </form>
+        <%- include('./partials/footer.ejs') %>
 
 </body>
 
