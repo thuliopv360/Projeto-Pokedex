@@ -71,21 +71,15 @@ const pokedex = [{
 let pokemon = undefined;
 
 app.get("/", (req, res) => {
-    pokemon = undefined;
     res.render("index", { pokedex, pokemon });
 });
 
-app.post("/:id", (req, res) => {
-    const id = req.params.id;
-    pokemon = pokedex[id];
-    res.render("/:id", { pokedex, pokemon });
-});
+// app.post("/:id", (req, res) => {
+//     const id = req.params.id;
+//     pokemon = pokedex[id];
+//     res.render("/:id", { pokedex, pokemon });
+// });
 
-//npm i
-// "start": "node index.js"
-// npm install dotenv --save
-// npm install dotenv
-// dotenv.config();
 app.post("/create", (req, res) => {
     const pokemon = req.body;
     pokemon.id = pokedex.length + 1;
@@ -93,30 +87,34 @@ app.post("/create", (req, res) => {
     res.redirect("/");
 });
 
-
-app.get("/update/:id", (req, res) => {
-    const id = Number(req.params.id);
+app.get("/detalhes/:id", (req, res) => {
+    const id = +req.params.id;
     pokemon = pokedex.find(pokemon => pokemon.id === id);
-
-    const newPokemon = req.body
-    pokedex[pokemon.id - 1] = newPokemon;
-
     res.redirect("/");
 });
 
-app.get("/detalhes/:id", (req, res) => {
-    let pokemon = [];
-    pokedex.filter((element) => {
-        if (element.id == req.params.id) {
-            pokemon.push(element);
-        }
-    })
-    res.render("detalhes.ejs", { pokemon });
-})
+app.post("/update/:id", (req, res) => {
+    const id = +req.params.id - 1;
+    const newPokemon = req.body;
+    newPokemon.id = id + 1;
+    pokedex[id] = newPokemon;
+    pokemon = undefined;
+    res.redirect("/");
+});
+
+// app.get("/detalhes/:id", (req, res) => {
+//     let pokemon = [];
+//     pokedex.filter((element) => {
+//         if (element.id == req.params.id) {
+//             pokemon.push(element);
+//         }
+//     })
+//     res.render("detalhes.ejs", { pokemon });
+// })
 
 app.get("/cadastro", (req, res) => {
     res.render("cadastro.ejs", { pokedex, pokemon });
 })
-const porta = 3030;
+const porta = 3031;
 
 app.listen(porta, () => { console.log(`servidor rodando em http://localhost:${porta}`) });

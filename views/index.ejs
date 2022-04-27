@@ -30,13 +30,14 @@
                             <p> Fraquezas:
                                 <%= pokemon.fraquezas %>
                             </p>
-                            <a href="/update/<%=pokemon.id%>">Editar</a>
+                            <a href="/detalhes/<%=pokemon.id%>">Editar</a>
                         </div>
                     </a>
                     <% }) %>
             </section>
             <section id="cadastro">
-                <% if(pokemon==undefined) { %>
+                <% if(pokemon==undefined) {%>
+
                     <h2>Cadastre um novo Pokemon! </h2>
 
                     <form action="/create" method="POST">
@@ -56,7 +57,7 @@
                     </form>
                     <% }else{ %>
                         <h2>Atualizaçao do Pokemon</h2>
-                        <form action="/update/<%= pokemon.id %>" method="GET">
+                        <form action="/update/<%= pokemon.id %>" method="post">
                             <label for="nome ">Nome: </label>
                             <input type="text " id="nome" name="nome" value="<%= pokemon.nome %>">
 
@@ -69,7 +70,7 @@
                             <label for="imagem">Link da imagem:</label>
                             <input type="text" id="imagem" name="imagem" value="<%= pokemon.imagem %>">
 
-                            <button id="btnCadastrar" type="submit">Atualizar</button>
+                            <button id="btnAtualizar" type="submit">Atualizar</button>
                         </form>
                         <% }%>
             </section>
