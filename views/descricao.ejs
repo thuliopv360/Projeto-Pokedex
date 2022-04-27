@@ -12,17 +12,60 @@
 
 <body id="detalhes">
     <%- include('./partials/header.ejs') %>
-        <main>
-            <img src="<%= pokemon.imagem %>" alt="">
-            <h2>
+        <main id="flex">
+            <h4>Nome:
                 <%= pokemon.nome %>
-            </h2>
-            <h3>
-                <%= pokemon.id %>
-            </h3>
-            <h4>
-                <%= pokemon.descricao %>
             </h4>
+            <img src="<%= pokemon.imagem %>" alt="imagem Pokemon">
+            <div class="boxes">
+                <h4>Descricao:
+                    <p>
+                        <%= pokemon.descricao %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>altura:
+                    <p>
+                        <%= pokemon.altura %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>peso:
+                    <p>
+                        <%= pokemon.peso %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>Categoria:
+                    <p>
+                        <%= pokemon.categoria %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>Habilidade:
+                    <p>
+                        <%= pokemon.habilidade %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>Tipo:
+                    <p>
+                        <%= pokemon.tipo %>
+                    </p>
+                </h4>
+            </div>
+            <div class="boxes">
+                <h4>Fraquezas:
+                    <p>
+                        <%= pokemon.fraquezas %>
+                    </p>
+                </h4>
+            </div>
         </main>
         <%- include('./partials/footer.ejs') %>
 </body>
