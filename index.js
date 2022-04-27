@@ -61,8 +61,19 @@ const pokedex = [{
     altura: 0.5,
     peso: 9.0,
     categoria: "Tiny Turtle",
-    habilidades: ["Torrent"],
+    habilidade: ["Torrent"],
     fraquezas: [grama, eletrico]
+}, {
+    id: 4,
+    nome: "Pikachu",
+    tipo: [eletrico],
+    imagem: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+    descricao: "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+    altura: 0.4,
+    peso: 6.0,
+    categoria: "Mouse",
+    habilidade: ["Static"],
+    fraquezas: [terra]
 }];
 
 
