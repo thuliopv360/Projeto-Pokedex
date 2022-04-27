@@ -12,6 +12,9 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
+        <header>
+            <img src="https://i.pinimg.com/originals/c4/28/7b/c4287b425c8b3ec7b1c50f4acbe332a0.jpg" alt="">
+        </header>
         <main>
             <section id="cadastro">
                 <% if(pokemon==undefined) {%>
@@ -86,9 +89,9 @@
 
                 <h2>Lista de Pokemons</h2>
                 <% pokedex.forEach((pokemon) => { %>
-                    <a href="/detalhes/<%=pokemon.id%>" id="box">
+                    <a href="/descricao/<%=pokemon.id%>" id="box">
                         <div class="card">
-                            <img src="<%= pokemon.imagem %>" alt="">
+                            <img src="<%= pokemon.imagem %>" alt="imagem pokemon">
                             <h3>
                                 <%= pokemon.nome%>
                             </h3>
@@ -99,6 +102,7 @@
                                 <%= pokemon.tipo %>
                             </p>
                             <a href="/detalhes/<%=pokemon.id%>" id="editar">Editar</a>
+                            <a href="/delete/<%=pokemon.id%>" id="apagar">Apagar</a>
                         </div>
                     </a>
                     <% }) %>

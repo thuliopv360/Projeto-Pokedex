@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Roboto, Arial;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -9,14 +10,41 @@ body {
     width: 100vw;
 }
 
-header {
-    padding: 3rem;
-    height: 10%;
+nav {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
     background-color: red;
+}
+
+nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0.6rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+}
+
+nav img {
+    width: 3rem;
+}
+
+nav ul li h1 {
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+header img {
+    margin-top: 3rem;
+    width: 100%;
 }
 
 ul#container a {
@@ -96,21 +124,40 @@ section#cards div.card h3 {
 
 section#cards div.card a#editar {
     padding: 0.6rem;
-    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+    background-color: #fff;
+    border: solid 1px #0077ff;
+    color: #0077ff;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+section#cards div.card a#editar:hover {
+    background-color: #0077ff;
+    color: #fff;
+}
+
+section#cards div.card a#apagar {
+    padding: 0.6rem;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     font-size: 1rem;
     background-color: #fff;
     border: solid 1px red;
-    color: rgb(255, 0, 0);
+    color: #ff0000;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     text-decoration: none;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-section#cards div.card a#editar:hover {
+section#cards div.card a#apagar:hover {
     background-color: red;
     color: #fff;
 }
@@ -169,11 +216,6 @@ section#cadastro form button:hover {
     color: #fff;
 }
 
-footer {
-    height: 10%;
-    background-color: red;
-}
-
 body#detalhes main {
     height: 70%;
     padding: 1.5rem;
@@ -181,4 +223,26 @@ body#detalhes main {
 
 body#detalhes main img {
     width: 20rem;
+}
+
+footer {
+    background-color: red;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p {
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
 }

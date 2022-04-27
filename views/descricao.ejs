@@ -7,23 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="../public/img/pokebola.ico" type="image/x-icon">
-    <title>Detalhes</title>
+    <title>Descriçao</title>
 </head>
 
 <body id="detalhes">
     <%- include('./partials/header.ejs') %>
         <main>
-            <img src="<%= pokemon[0].imagem %>" alt="">
+            <img src="<%= pokemon.imagem %>" alt="">
             <h2>
-                <%= pokemon[0].nome %>
+                <%= pokemon.nome %>
             </h2>
             <h3>
-                <%= pokemon[0].id %>
+                <%= pokemon.id %>
             </h3>
             <h4>
-                <%= pokemon[0].descricao %>
+                <%= pokemon.descricao %>
             </h4>
-
         </main>
         <%- include('./partials/footer.ejs') %>
 </body>
