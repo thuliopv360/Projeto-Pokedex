@@ -95,19 +95,6 @@ main section#cards a {
     color: black;
 }
 
-main#flex {
-    border: solid 1 pxrgb(246, 162, 162);
-    display: flex;
-    flex-direction: column;
-}
-
-main#flex img {}
-
-main#flex div.boxes {
-    display: flex;
-    flex-direction: row;
-}
-
 section#cards div.card {
     border: red 1px solid;
     width: 20rem;
@@ -229,13 +216,41 @@ section#cadastro form button:hover {
     color: #fff;
 }
 
-body#detalhes main {
+body#detalhes main#flex {
     height: 70%;
-    padding: 1.5rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    border: solid 2px rgb(246, 162, 162);
 }
 
-body#detalhes main img {
-    width: 20rem;
+body#detalhes main#flex h4 {
+    text-align: center;
+    justify-content: center;
+}
+
+body#detalhes main#flex img {
+    width: 15%;
+    height: 40%;
+}
+
+main#flex div.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+main#flex h3 {
+    font-size: 1.5rem;
+}
+
+div.boxes h4 {
+    font-size: 1.2rem;
+}
+
+div.boxes h4 span {
+    font-size: 1rem;
+    font-weight: 200;
 }
 
 footer {

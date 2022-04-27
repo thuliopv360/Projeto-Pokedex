@@ -6,64 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="shortcut icon" href="../public/img/pokebola.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/pokebola.ico" type="image/x-icon">
     <title>Descriçao</title>
 </head>
 
 <body id="detalhes">
     <%- include('./partials/header.ejs') %>
         <main id="flex">
-            <h4>Nome:
-                <%= pokemon.nome %>
-            </h4>
             <img src="<%= pokemon.imagem %>" alt="imagem Pokemon">
+            <h3>Nome:
+                <%= pokemon.nome %>
+            </h3>
             <div class="boxes">
                 <h4>Descricao:
-                    <p>
+                    <span>
                         <%= pokemon.descricao %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
-                <h4>altura:
-                    <p>
+                <h4>Altura:
+                    <span>
                         <%= pokemon.altura %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
-                <h4>peso:
-                    <p>
+                <h4>Peso:
+                    <span>
                         <%= pokemon.peso %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
                 <h4>Categoria:
-                    <p>
+                    <span>
                         <%= pokemon.categoria %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
                 <h4>Habilidade:
-                    <p>
+                    <span>
                         <%= pokemon.habilidade %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
                 <h4>Tipo:
-                    <p>
+                    <span>
                         <%= pokemon.tipo %>
-                    </p>
+                    </span>
                 </h4>
             </div>
             <div class="boxes">
                 <h4>Fraquezas:
-                    <p>
+                    <span>
                         <%= pokemon.fraquezas %>
-                    </p>
+                    </span>
                 </h4>
             </div>
         </main>
